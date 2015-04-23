@@ -308,5 +308,5 @@ head(tidy_data)
 ```
 
 ```r
-write.table(tidy_data,file="tidy_data_arun.txt")
+write.table(tidy_data,file="tidy_data_arun.txt", row.name=FALSE)
 ```
