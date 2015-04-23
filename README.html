@@ -455,16 +455,9 @@ merged_all_data &lt;- merged_all_data[, select, with = FALSE]
         merged_all_data$featAxis &lt;- factor(x %*% y, labels = c(NA, &quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;))
 
         #Check to make sure all possible combinations of feature are accounted for by all possible combinations of the factor class variables.
-        r1 &lt;- nrow(merged_all_data[, .N, by = c(&quot;feature&quot;)])
-        r2 &lt;- nrow(merged_all_data[, .N, by = c(&quot;featDomain&quot;, &quot;featAcceleration&quot;, &quot;featInstrument&quot;, &quot;featJerk&quot;, &quot;featMagnitude&quot;, &quot;featVariable&quot;, &quot;featAxis&quot;)])
-        r1 == r2
-</code></pre>
-
-<pre><code>## [1] FALSE
-</code></pre>
-
-<pre><code class="r">        ## [1] TRUE
-        # accounted for all possible combinations. feature is now duplicate.
+        n1 &lt;- nrow(merged_all_data[, .N, by = c(&quot;feature&quot;)])
+        n2 &lt;- nrow(merged_all_data[, .N, by = c(&quot;featDomain&quot;, &quot;featAcceleration&quot;, &quot;featInstrument&quot;, &quot;featJerk&quot;, &quot;featMagnitude&quot;, &quot;featVariable&quot;, &quot;featAxis&quot;)])
+        n1 == n2
 </code></pre>
 
 <h1>Step 5 : Create a tidy data set</h1>

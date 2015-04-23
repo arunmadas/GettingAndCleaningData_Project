@@ -265,22 +265,14 @@ merged_all_data <- merged_all_data[, select, with = FALSE]
         merged_all_data$featAxis <- factor(x %*% y, labels = c(NA, "X", "Y", "Z"))
 
         #Check to make sure all possible combinations of feature are accounted for by all possible combinations of the factor class variables.
-        r1 <- nrow(merged_all_data[, .N, by = c("feature")])
-        r2 <- nrow(merged_all_data[, .N, by = c("featDomain", "featAcceleration", "featInstrument", "featJerk", "featMagnitude", "featVariable", "featAxis")])
-        r1 == r2
-```
-
-```
-## [1] FALSE
-```
-
-```r
-        ## [1] TRUE
-        # accounted for all possible combinations. feature is now duplicate.
+        n1 <- nrow(merged_all_data[, .N, by = c("feature")])
+        n2 <- nrow(merged_all_data[, .N, by = c("featDomain", "featAcceleration", "featInstrument", "featJerk", "featMagnitude", "featVariable", "featAxis")])
+        if(n1 == n2) {
+			print("Same")
+		}
 ```
 
 # Step 5 : Create a tidy data set
-
 
 ```r
 # Create a data set with the average of each variable for each activity and each subject.
