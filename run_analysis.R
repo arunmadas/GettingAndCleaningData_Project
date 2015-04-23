@@ -142,4 +142,7 @@ setkey(merged_all_data, subject, activity, featDomain, featAcceleration, featIns
        featJerk, featMagnitude, featVariable, featAxis)
 tidy_data <- merged_all_data[, list(count = .N, average = mean(value)), by = key(merged_all_data)]
 
-write.table(tidy_data,file="tidy_data_arun.txt")
+write.table(tidy_data,file="tidy_data_arun.txt",row.name=FALSE)
+
+#library("knitr")
+#knit2html("README.Rmd")
