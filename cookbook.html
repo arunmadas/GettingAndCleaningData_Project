@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+<title>Author : Arun Kumar Madas</title>
+
+<script type="text/javascript">
+window.onload = function() {
+  var imgs = document.getElementsByTagName('img'), i, img;
+  for (i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    // center an image if it is the only element of its parent
+    if (img.parentElement.childElementCount === 1)
+      img.parentElement.style.textAlign = 'center';
+  }
+};
+</script>
+
+<!-- Styles for R syntax highlighter -->
+<style type="text/css">
+   pre .operator,
+   pre .paren {
+     color: rgb(104, 118, 135)
+   }
+
+   pre .literal {
+     color: #990073
+   }
+
+   pre .number {
+     color: #099;
+   }
+
+   pre .comment {
+     color: #998;
+     font-style: italic
+   }
+
+   pre .keyword {
+     color: #900;
+     font-weight: bold
+   }
+
+   pre .identifier {
+     color: rgb(0, 0, 0);
+   }
+
+   pre .string {
+     color: #d14;
+   }
+</style>
+
+<!-- R syntax highlighter -->
+<script type="text/javascript">
+var hljs=new function(){function m(p){return p.replace(/&/gm,"&amp;").replace(/</gm,"&lt;")}function f(r,q,p){return RegExp(q,"m"+(r.cI?"i":"")+(p?"g":""))}function b(r){for(var p=0;p<r.childNodes.length;p++){var q=r.childNodes[p];if(q.nodeName=="CODE"){return q}if(!(q.nodeType==3&&q.nodeValue.match(/\s+/))){break}}}function h(t,s){var p="";for(var r=0;r<t.childNodes.length;r++){if(t.childNodes[r].nodeType==3){var q=t.childNodes[r].nodeValue;if(s){q=q.replace(/\n/g,"")}p+=q}else{if(t.childNodes[r].nodeName=="BR"){p+="\n"}else{p+=h(t.childNodes[r])}}}if(/MSIE [678]/.test(navigator.userAgent)){p=p.replace(/\r/g,"\n")}return p}function a(s){var r=s.className.split(/\s+/);r=r.concat(s.parentNode.className.split(/\s+/));for(var q=0;q<r.length;q++){var p=r[q].replace(/^language-/,"");if(e[p]){return p}}}function c(q){var p=[];(function(s,t){for(var r=0;r<s.childNodes.length;r++){if(s.childNodes[r].nodeType==3){t+=s.childNodes[r].nodeValue.length}else{if(s.childNodes[r].nodeName=="BR"){t+=1}else{if(s.childNodes[r].nodeType==1){p.push({event:"start",offset:t,node:s.childNodes[r]});t=arguments.callee(s.childNodes[r],t);p.push({event:"stop",offset:t,node:s.childNodes[r]})}}}}return t})(q,0);return p}function k(y,w,x){var q=0;var z="";var s=[];function u(){if(y.length&&w.length){if(y[0].offset!=w[0].offset){return(y[0].offset<w[0].offset)?y:w}else{return w[0].event=="start"?y:w}}else{return y.length?y:w}}function t(D){var A="<"+D.nodeName.toLowerCase();for(var B=0;B<D.attributes.length;B++){var C=D.attributes[B];A+=" "+C.nodeName.toLowerCase();if(C.value!==undefined&&C.value!==false&&C.value!==null){A+='="'+m(C.value)+'"'}}return A+">"}while(y.length||w.length){var v=u().splice(0,1)[0];z+=m(x.substr(q,v.offset-q));q=v.offset;if(v.event=="start"){z+=t(v.node);s.push(v.node)}else{if(v.event=="stop"){var p,r=s.length;do{r--;p=s[r];z+=("</"+p.nodeName.toLowerCase()+">")}while(p!=v.node);s.splice(r,1);while(r<s.length){z+=t(s[r]);r++}}}}return z+m(x.substr(q))}function j(){function q(x,y,v){if(x.compiled){return}var u;var s=[];if(x.k){x.lR=f(y,x.l||hljs.IR,true);for(var w in x.k){if(!x.k.hasOwnProperty(w)){continue}if(x.k[w] instanceof Object){u=x.k[w]}else{u=x.k;w="keyword"}for(var r in u){if(!u.hasOwnProperty(r)){continue}x.k[r]=[w,u[r]];s.push(r)}}}if(!v){if(x.bWK){x.b="\\b("+s.join("|")+")\\s"}x.bR=f(y,x.b?x.b:"\\B|\\b");if(!x.e&&!x.eW){x.e="\\B|\\b"}if(x.e){x.eR=f(y,x.e)}}if(x.i){x.iR=f(y,x.i)}if(x.r===undefined){x.r=1}if(!x.c){x.c=[]}x.compiled=true;for(var t=0;t<x.c.length;t++){if(x.c[t]=="self"){x.c[t]=x}q(x.c[t],y,false)}if(x.starts){q(x.starts,y,false)}}for(var p in e){if(!e.hasOwnProperty(p)){continue}q(e[p].dM,e[p],true)}}function d(B,C){if(!j.called){j();j.called=true}function q(r,M){for(var L=0;L<M.c.length;L++){if((M.c[L].bR.exec(r)||[null])[0]==r){return M.c[L]}}}function v(L,r){if(D[L].e&&D[L].eR.test(r)){return 1}if(D[L].eW){var M=v(L-1,r);return M?M+1:0}return 0}function w(r,L){return L.i&&L.iR.test(r)}function K(N,O){var M=[];for(var L=0;L<N.c.length;L++){M.push(N.c[L].b)}var r=D.length-1;do{if(D[r].e){M.push(D[r].e)}r--}while(D[r+1].eW);if(N.i){M.push(N.i)}return f(O,M.join("|"),true)}function p(M,L){var N=D[D.length-1];if(!N.t){N.t=K(N,E)}N.t.lastIndex=L;var r=N.t.exec(M);return r?[M.substr(L,r.index-L),r[0],false]:[M.substr(L),"",true]}function z(N,r){var L=E.cI?r[0].toLowerCase():r[0];var M=N.k[L];if(M&&M instanceof Array){return M}return false}function F(L,P){L=m(L);if(!P.k){return L}var r="";var O=0;P.lR.lastIndex=0;var M=P.lR.exec(L);while(M){r+=L.substr(O,M.index-O);var N=z(P,M);if(N){x+=N[1];r+='<span class="'+N[0]+'">'+M[0]+"</span>"}else{r+=M[0]}O=P.lR.lastIndex;M=P.lR.exec(L)}return r+L.substr(O,L.length-O)}function J(L,M){if(M.sL&&e[M.sL]){var r=d(M.sL,L);x+=r.keyword_count;return r.value}else{return F(L,M)}}function I(M,r){var L=M.cN?'<span class="'+M.cN+'">':"";if(M.rB){y+=L;M.buffer=""}else{if(M.eB){y+=m(r)+L;M.buffer=""}else{y+=L;M.buffer=r}}D.push(M);A+=M.r}function G(N,M,Q){var R=D[D.length-1];if(Q){y+=J(R.buffer+N,R);return false}var P=q(M,R);if(P){y+=J(R.buffer+N,R);I(P,M);return P.rB}var L=v(D.length-1,M);if(L){var O=R.cN?"</span>":"";if(R.rE){y+=J(R.buffer+N,R)+O}else{if(R.eE){y+=J(R.buffer+N,R)+O+m(M)}else{y+=J(R.buffer+N+M,R)+O}}while(L>1){O=D[D.length-2].cN?"</span>":"";y+=O;L--;D.length--}var r=D[D.length-1];D.length--;D[D.length-1].buffer="";if(r.starts){I(r.starts,"")}return R.rE}if(w(M,R)){throw"Illegal"}}var E=e[B];var D=[E.dM];var A=0;var x=0;var y="";try{var s,u=0;E.dM.buffer="";do{s=p(C,u);var t=G(s[0],s[1],s[2]);u+=s[0].length;if(!t){u+=s[1].length}}while(!s[2]);if(D.length>1){throw"Illegal"}return{r:A,keyword_count:x,value:y}}catch(H){if(H=="Illegal"){return{r:0,keyword_count:0,value:m(C)}}else{throw H}}}function g(t){var p={keyword_count:0,r:0,value:m(t)};var r=p;for(var q in e){if(!e.hasOwnProperty(q)){continue}var s=d(q,t);s.language=q;if(s.keyword_count+s.r>r.keyword_count+r.r){r=s}if(s.keyword_count+s.r>p.keyword_count+p.r){r=p;p=s}}if(r.language){p.second_best=r}return p}function i(r,q,p){if(q){r=r.replace(/^((<[^>]+>|\t)+)/gm,function(t,w,v,u){return w.replace(/\t/g,q)})}if(p){r=r.replace(/\n/g,"<br>")}return r}function n(t,w,r){var x=h(t,r);var v=a(t);var y,s;if(v){y=d(v,x)}else{return}var q=c(t);if(q.length){s=document.createElement("pre");s.innerHTML=y.value;y.value=k(q,c(s),x)}y.value=i(y.value,w,r);var u=t.className;if(!u.match("(\\s|^)(language-)?"+v+"(\\s|$)")){u=u?(u+" "+v):v}if(/MSIE [678]/.test(navigator.userAgent)&&t.tagName=="CODE"&&t.parentNode.tagName=="PRE"){s=t.parentNode;var p=document.createElement("div");p.innerHTML="<pre><code>"+y.value+"</code></pre>";t=p.firstChild.firstChild;p.firstChild.cN=s.cN;s.parentNode.replaceChild(p.firstChild,s)}else{t.innerHTML=y.value}t.className=u;t.result={language:v,kw:y.keyword_count,re:y.r};if(y.second_best){t.second_best={language:y.second_best.language,kw:y.second_best.keyword_count,re:y.second_best.r}}}function o(){if(o.called){return}o.called=true;var r=document.getElementsByTagName("pre");for(var p=0;p<r.length;p++){var q=b(r[p]);if(q){n(q,hljs.tabReplace)}}}function l(){if(window.addEventListener){window.addEventListener("DOMContentLoaded",o,false);window.addEventListener("load",o,false)}else{if(window.attachEvent){window.attachEvent("onload",o)}else{window.onload=o}}}var e={};this.LANGUAGES=e;this.highlight=d;this.highlightAuto=g;this.fixMarkup=i;this.highlightBlock=n;this.initHighlighting=o;this.initHighlightingOnLoad=l;this.IR="[a-zA-Z][a-zA-Z0-9_]*";this.UIR="[a-zA-Z_][a-zA-Z0-9_]*";this.NR="\\b\\d+(\\.\\d+)?";this.CNR="\\b(0[xX][a-fA-F0-9]+|(\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)";this.BNR="\\b(0b[01]+)";this.RSR="!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|\\.|-|-=|/|/=|:|;|<|<<|<<=|<=|=|==|===|>|>=|>>|>>=|>>>|>>>=|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~";this.ER="(?![\\s\\S])";this.BE={b:"\\\\.",r:0};this.ASM={cN:"string",b:"'",e:"'",i:"\\n",c:[this.BE],r:0};this.QSM={cN:"string",b:'"',e:'"',i:"\\n",c:[this.BE],r:0};this.CLCM={cN:"comment",b:"//",e:"$"};this.CBLCLM={cN:"comment",b:"/\\*",e:"\\*/"};this.HCM={cN:"comment",b:"#",e:"$"};this.NM={cN:"number",b:this.NR,r:0};this.CNM={cN:"number",b:this.CNR,r:0};this.BNM={cN:"number",b:this.BNR,r:0};this.inherit=function(r,s){var p={};for(var q in r){p[q]=r[q]}if(s){for(var q in s){p[q]=s[q]}}return p}}();hljs.LANGUAGES.cpp=function(){var a={keyword:{"false":1,"int":1,"float":1,"while":1,"private":1,"char":1,"catch":1,"export":1,virtual:1,operator:2,sizeof:2,dynamic_cast:2,typedef:2,const_cast:2,"const":1,struct:1,"for":1,static_cast:2,union:1,namespace:1,unsigned:1,"long":1,"throw":1,"volatile":2,"static":1,"protected":1,bool:1,template:1,mutable:1,"if":1,"public":1,friend:2,"do":1,"return":1,"goto":1,auto:1,"void":2,"enum":1,"else":1,"break":1,"new":1,extern:1,using:1,"true":1,"class":1,asm:1,"case":1,typeid:1,"short":1,reinterpret_cast:2,"default":1,"double":1,register:1,explicit:1,signed:1,typename:1,"try":1,"this":1,"switch":1,"continue":1,wchar_t:1,inline:1,"delete":1,alignof:1,char16_t:1,char32_t:1,constexpr:1,decltype:1,noexcept:1,nullptr:1,static_assert:1,thread_local:1,restrict:1,_Bool:1,complex:1},built_in:{std:1,string:1,cin:1,cout:1,cerr:1,clog:1,stringstream:1,istringstream:1,ostringstream:1,auto_ptr:1,deque:1,list:1,queue:1,stack:1,vector:1,map:1,set:1,bitset:1,multiset:1,multimap:1,unordered_set:1,unordered_map:1,unordered_multiset:1,unordered_multimap:1,array:1,shared_ptr:1}};return{dM:{k:a,i:"</",c:[hljs.CLCM,hljs.CBLCLM,hljs.QSM,{cN:"string",b:"'\\\\?.",e:"'",i:"."},{cN:"number",b:"\\b(\\d+(\\.\\d*)?|\\.\\d+)(u|U|l|L|ul|UL|f|F)"},hljs.CNM,{cN:"preprocessor",b:"#",e:"$"},{cN:"stl_container",b:"\\b(deque|list|queue|stack|vector|map|set|bitset|multiset|multimap|unordered_map|unordered_set|unordered_multiset|unordered_multimap|array)\\s*<",e:">",k:a,r:10,c:["self"]}]}}}();hljs.LANGUAGES.r={dM:{c:[hljs.HCM,{cN:"number",b:"\\b0[xX][0-9a-fA-F]+[Li]?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+(?:[eE][+\\-]?\\d*)?L\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\b\\d+\\.(?!\\d)(?:i\\b)?",e:hljs.IMMEDIATE_RE,r:1},{cN:"number",b:"\\b\\d+(?:\\.\\d*)?(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"number",b:"\\.\\d+(?:[eE][+\\-]?\\d*)?i?\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"keyword",b:"(?:tryCatch|library|setGeneric|setGroupGeneric)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\.",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\.\\.\\d+(?![\\w.])",e:hljs.IMMEDIATE_RE,r:10},{cN:"keyword",b:"\\b(?:function)",e:hljs.IMMEDIATE_RE,r:2},{cN:"keyword",b:"(?:if|in|break|next|repeat|else|for|return|switch|while|try|stop|warning|require|attach|detach|source|setMethod|setClass)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"literal",b:"(?:NA|NA_integer_|NA_real_|NA_character_|NA_complex_)\\b",e:hljs.IMMEDIATE_RE,r:10},{cN:"literal",b:"(?:NULL|TRUE|FALSE|T|F|Inf|NaN)\\b",e:hljs.IMMEDIATE_RE,r:1},{cN:"identifier",b:"[a-zA-Z.][a-zA-Z0-9._]*\\b",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"<\\-(?!\\s*\\d)",e:hljs.IMMEDIATE_RE,r:2},{cN:"operator",b:"\\->|<\\-",e:hljs.IMMEDIATE_RE,r:1},{cN:"operator",b:"%%|~",e:hljs.IMMEDIATE_RE},{cN:"operator",b:">=|<=|==|!=|\\|\\||&&|=|\\+|\\-|\\*|/|\\^|>|<|!|&|\\||\\$|:",e:hljs.IMMEDIATE_RE,r:0},{cN:"operator",b:"%",e:"%",i:"\\n",r:1},{cN:"identifier",b:"`",e:"`",r:0},{cN:"string",b:'"',e:'"',c:[hljs.BE],r:0},{cN:"string",b:"'",e:"'",c:[hljs.BE],r:0},{cN:"paren",b:"[[({\\])}]",e:hljs.IMMEDIATE_RE,r:0}]}};
+hljs.initHighlightingOnLoad();
+</script>
+
+<!-- MathJax scripts -->
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+<style type="text/css">
+body, td {
+   font-family: sans-serif;
+   background-color: white;
+   font-size: 13px;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  padding: 1em;
+  line-height: 20px;
+}
+
+tt, code, pre {
+   font-family: 'DejaVu Sans Mono', 'Droid Sans Mono', 'Lucida Console', Consolas, Monaco, monospace;
+}
+
+h1 {
+   font-size:2.2em;
+}
+
+h2 {
+   font-size:1.8em;
+}
+
+h3 {
+   font-size:1.4em;
+}
+
+h4 {
+   font-size:1.0em;
+}
+
+h5 {
+   font-size:0.9em;
+}
+
+h6 {
+   font-size:0.8em;
+}
+
+a:visited {
+   color: rgb(50%, 0%, 50%);
+}
+
+pre, img {
+  max-width: 100%;
+}
+pre {
+  overflow-x: auto;
+}
+pre code {
+   display: block; padding: 0.5em;
+}
+
+code {
+  font-size: 92%;
+  border: 1px solid #ccc;
+}
+
+code[class] {
+  background-color: #F8F8F8;
+}
+
+table, td, th {
+  border: none;
+}
+
+blockquote {
+   color:#666666;
+   margin:0;
+   padding-left: 1em;
+   border-left: 0.5em #EEE solid;
+}
+
+hr {
+   height: 0px;
+   border-bottom: none;
+   border-top-width: thin;
+   border-top-style: dotted;
+   border-top-color: #999999;
+}
+
+@media print {
+   * {
+      background: transparent !important;
+      color: black !important;
+      filter:none !important;
+      -ms-filter: none !important;
+   }
+
+   body {
+      font-size:12pt;
+      max-width:100%;
+   }
+
+   a, a:visited {
+      text-decoration: underline;
+   }
+
+   hr {
+      visibility: hidden;
+      page-break-before: always;
+   }
+
+   pre, blockquote {
+      padding-right: 1em;
+      page-break-inside: avoid;
+   }
+
+   tr, img {
+      page-break-inside: avoid;
+   }
+
+   img {
+      max-width: 100% !important;
+   }
+
+   @page :left {
+      margin: 15mm 20mm 15mm 10mm;
+   }
+
+   @page :right {
+      margin: 15mm 10mm 15mm 20mm;
+   }
+
+   p, h2, h3 {
+      orphans: 3; widows: 3;
+   }
+
+   h2, h3 {
+      page-break-after: avoid;
+   }
+}
+</style>
+
+
+
+</head>
+
+<body>
+<hr/>
+
+<h2>Author : Arun Kumar Madas</h2>
+
+<h2>Date   : 04/20/2015</h2>
+
+<h2>Course : Getting and Cleaning Data</h2>
+
+<hr/>
+
+<p>Use the required libraries</p>
+
+<pre><code class="r">#packages
+# install.packages(&quot;data.table&quot;)
+# install.packages(&quot;reshape2&quot;)
+library(&quot;data.table&quot;)
+library(&quot;reshape2&quot;)
+</code></pre>
+
+<p>#Step 1 : download the data zip file, unzip the files, validate if unzip was good, merge data sets.</p>
+
+<h2>1. Merges the training and the test sets to create one data set.</h2>
+
+<pre><code class="r">        # set current working directory
+        setwd(&quot;C:/Arun/docs/dsc_jhu/3__datacleaning/courseproj&quot;)
+        #create temp file
+        temp &lt;- tempfile()
+        #sets to use internet intended to use for downloading zip data file
+        setInternet2(use = TRUE)
+        #download the file to temp
+        download.file(&quot;https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip&quot;,temp,mode=&quot;wb&quot;)
+        #unzip the temp into current working directory, overwrite if previously present, helps in re-running
+        unzip(temp, overwrite=TRUE,exdir=&quot;.&quot;)
+        #cleanup
+        unlink(temp)
+
+        #set the current working directory into path variable
+        path &lt;- getwd()
+        # append the extracted directory
+        pathIn &lt;- file.path(path, &quot;UCI HAR Dataset&quot;)
+
+        #check the listing of file directory 
+        extractedFileList&lt;-list.files(pathIn, recursive = TRUE)
+        extractedFileList
+</code></pre>
+
+<pre><code>##  [1] &quot;activity_labels.txt&quot;                         
+##  [2] &quot;features.txt&quot;                                
+##  [3] &quot;features_info.txt&quot;                           
+##  [4] &quot;README.txt&quot;                                  
+##  [5] &quot;test/Inertial Signals/body_acc_x_test.txt&quot;   
+##  [6] &quot;test/Inertial Signals/body_acc_y_test.txt&quot;   
+##  [7] &quot;test/Inertial Signals/body_acc_z_test.txt&quot;   
+##  [8] &quot;test/Inertial Signals/body_gyro_x_test.txt&quot;  
+##  [9] &quot;test/Inertial Signals/body_gyro_y_test.txt&quot;  
+## [10] &quot;test/Inertial Signals/body_gyro_z_test.txt&quot;  
+## [11] &quot;test/Inertial Signals/total_acc_x_test.txt&quot;  
+## [12] &quot;test/Inertial Signals/total_acc_y_test.txt&quot;  
+## [13] &quot;test/Inertial Signals/total_acc_z_test.txt&quot;  
+## [14] &quot;test/subject_test.txt&quot;                       
+## [15] &quot;test/X_test.txt&quot;                             
+## [16] &quot;test/y_test.txt&quot;                             
+## [17] &quot;train/Inertial Signals/body_acc_x_train.txt&quot; 
+## [18] &quot;train/Inertial Signals/body_acc_y_train.txt&quot; 
+## [19] &quot;train/Inertial Signals/body_acc_z_train.txt&quot; 
+## [20] &quot;train/Inertial Signals/body_gyro_x_train.txt&quot;
+## [21] &quot;train/Inertial Signals/body_gyro_y_train.txt&quot;
+## [22] &quot;train/Inertial Signals/body_gyro_z_train.txt&quot;
+## [23] &quot;train/Inertial Signals/total_acc_x_train.txt&quot;
+## [24] &quot;train/Inertial Signals/total_acc_y_train.txt&quot;
+## [25] &quot;train/Inertial Signals/total_acc_z_train.txt&quot;
+## [26] &quot;train/subject_train.txt&quot;                     
+## [27] &quot;train/X_train.txt&quot;                           
+## [28] &quot;train/y_train.txt&quot;
+</code></pre>
+
+<pre><code class="r">        #validate if directory is empty or not
+        if(length(extractedFileList)==0) {
+                cat(&quot;Unzipped directory is empty&quot;)
+                return
+        }
+</code></pre>
+
+<h1>Start reading in the data, merge the data.</h1>
+
+<pre><code class="r">        #read the subject data for both train and test
+        train_subject_data &lt;- fread(file.path(pathIn, &quot;train&quot;, &quot;subject_train.txt&quot;))
+        test_subject_data &lt;- fread(file.path(pathIn, &quot;test&quot;, &quot;subject_test.txt&quot;))        
+        #read the Y data for both train and test
+        train_y_data &lt;- fread(file.path(pathIn, &quot;train&quot;, &quot;Y_train.txt&quot;))
+        test_y_data &lt;- fread(file.path(pathIn, &quot;test&quot;, &quot;Y_test.txt&quot;))
+        #read the X data for both train and test
+        train_x_data &lt;- data.table(read.table(file=&quot;./UCI HAR DataSet/train/X_train.txt&quot;))
+        test_x_data &lt;- data.table(read.table(file=&quot;./UCI HAR DataSet/test/X_test.txt&quot;))        
+
+        # Merging the training and test data sets
+        # concatenate the subject data for train and test, use rbind to append at row level
+        merged_subject_data &lt;- rbind(train_subject_data,test_subject_data)
+        setnames(merged_subject_data, &quot;V1&quot;, &quot;subject&quot;)
+        # concatenate the x data for train and test, use rbind to append at row level
+        merged_x_data &lt;- rbind(train_x_data,test_x_data)
+        # concatenate the Y data for train and test, use rbind to append at row level 
+        merged_y_data &lt;- rbind(train_y_data,test_y_data)
+        setnames(merged_y_data,&quot;V1&quot;,&quot;activityNum&quot;)
+        #Merge all Data columns into one
+        merged_subject_data &lt;- cbind(merged_subject_data, merged_y_data)
+        merged_all_data &lt;- cbind(merged_subject_data, merged_x_data)
+        setkey(merged_all_data, subject, activityNum)
+</code></pre>
+
+<h1>Step 2 :Extracts only the measurements on the mean and standard deviation for each measurement.</h1>
+
+<pre><code class="r">#read the features.txt file
+features_data &lt;- fread(file.path(pathIn, &quot;features.txt&quot;))
+#assign column names
+setnames(features_data, names(features_data), c(&quot;featureNum&quot;, &quot;featureName&quot;))
+#subset the data from featurename containing mean or std
+# Subset only measurements for the mean and standard deviation
+mean_std_features &lt;- features_data[grepl(&quot;mean\\(\\)|std\\(\\)&quot;, featureName)]
+
+#Convert the column numbers to a vector of variable names matching columns in merged_all_data
+features_data$featureCode&lt;-features_data[, paste0(&quot;V&quot;, featureNum)]
+head(features_data)
+</code></pre>
+
+<pre><code>##    featureNum       featureName featureCode
+## 1:          1 tBodyAcc-mean()-X          V1
+## 2:          2 tBodyAcc-mean()-Y          V2
+## 3:          3 tBodyAcc-mean()-Z          V3
+## 4:          4  tBodyAcc-std()-X          V4
+## 5:          5  tBodyAcc-std()-Y          V5
+## 6:          6  tBodyAcc-std()-Z          V6
+</code></pre>
+
+<pre><code class="r">features_data$featureCode
+</code></pre>
+
+<pre><code>##   [1] &quot;V1&quot;   &quot;V2&quot;   &quot;V3&quot;   &quot;V4&quot;   &quot;V5&quot;   &quot;V6&quot;   &quot;V7&quot;   &quot;V8&quot;   &quot;V9&quot;   &quot;V10&quot; 
+##  [11] &quot;V11&quot;  &quot;V12&quot;  &quot;V13&quot;  &quot;V14&quot;  &quot;V15&quot;  &quot;V16&quot;  &quot;V17&quot;  &quot;V18&quot;  &quot;V19&quot;  &quot;V20&quot; 
+##  [21] &quot;V21&quot;  &quot;V22&quot;  &quot;V23&quot;  &quot;V24&quot;  &quot;V25&quot;  &quot;V26&quot;  &quot;V27&quot;  &quot;V28&quot;  &quot;V29&quot;  &quot;V30&quot; 
+##  [31] &quot;V31&quot;  &quot;V32&quot;  &quot;V33&quot;  &quot;V34&quot;  &quot;V35&quot;  &quot;V36&quot;  &quot;V37&quot;  &quot;V38&quot;  &quot;V39&quot;  &quot;V40&quot; 
+##  [41] &quot;V41&quot;  &quot;V42&quot;  &quot;V43&quot;  &quot;V44&quot;  &quot;V45&quot;  &quot;V46&quot;  &quot;V47&quot;  &quot;V48&quot;  &quot;V49&quot;  &quot;V50&quot; 
+##  [51] &quot;V51&quot;  &quot;V52&quot;  &quot;V53&quot;  &quot;V54&quot;  &quot;V55&quot;  &quot;V56&quot;  &quot;V57&quot;  &quot;V58&quot;  &quot;V59&quot;  &quot;V60&quot; 
+##  [61] &quot;V61&quot;  &quot;V62&quot;  &quot;V63&quot;  &quot;V64&quot;  &quot;V65&quot;  &quot;V66&quot;  &quot;V67&quot;  &quot;V68&quot;  &quot;V69&quot;  &quot;V70&quot; 
+##  [71] &quot;V71&quot;  &quot;V72&quot;  &quot;V73&quot;  &quot;V74&quot;  &quot;V75&quot;  &quot;V76&quot;  &quot;V77&quot;  &quot;V78&quot;  &quot;V79&quot;  &quot;V80&quot; 
+##  [81] &quot;V81&quot;  &quot;V82&quot;  &quot;V83&quot;  &quot;V84&quot;  &quot;V85&quot;  &quot;V86&quot;  &quot;V87&quot;  &quot;V88&quot;  &quot;V89&quot;  &quot;V90&quot; 
+##  [91] &quot;V91&quot;  &quot;V92&quot;  &quot;V93&quot;  &quot;V94&quot;  &quot;V95&quot;  &quot;V96&quot;  &quot;V97&quot;  &quot;V98&quot;  &quot;V99&quot;  &quot;V100&quot;
+## [101] &quot;V101&quot; &quot;V102&quot; &quot;V103&quot; &quot;V104&quot; &quot;V105&quot; &quot;V106&quot; &quot;V107&quot; &quot;V108&quot; &quot;V109&quot; &quot;V110&quot;
+## [111] &quot;V111&quot; &quot;V112&quot; &quot;V113&quot; &quot;V114&quot; &quot;V115&quot; &quot;V116&quot; &quot;V117&quot; &quot;V118&quot; &quot;V119&quot; &quot;V120&quot;
+## [121] &quot;V121&quot; &quot;V122&quot; &quot;V123&quot; &quot;V124&quot; &quot;V125&quot; &quot;V126&quot; &quot;V127&quot; &quot;V128&quot; &quot;V129&quot; &quot;V130&quot;
+## [131] &quot;V131&quot; &quot;V132&quot; &quot;V133&quot; &quot;V134&quot; &quot;V135&quot; &quot;V136&quot; &quot;V137&quot; &quot;V138&quot; &quot;V139&quot; &quot;V140&quot;
+## [141] &quot;V141&quot; &quot;V142&quot; &quot;V143&quot; &quot;V144&quot; &quot;V145&quot; &quot;V146&quot; &quot;V147&quot; &quot;V148&quot; &quot;V149&quot; &quot;V150&quot;
+## [151] &quot;V151&quot; &quot;V152&quot; &quot;V153&quot; &quot;V154&quot; &quot;V155&quot; &quot;V156&quot; &quot;V157&quot; &quot;V158&quot; &quot;V159&quot; &quot;V160&quot;
+## [161] &quot;V161&quot; &quot;V162&quot; &quot;V163&quot; &quot;V164&quot; &quot;V165&quot; &quot;V166&quot; &quot;V167&quot; &quot;V168&quot; &quot;V169&quot; &quot;V170&quot;
+## [171] &quot;V171&quot; &quot;V172&quot; &quot;V173&quot; &quot;V174&quot; &quot;V175&quot; &quot;V176&quot; &quot;V177&quot; &quot;V178&quot; &quot;V179&quot; &quot;V180&quot;
+## [181] &quot;V181&quot; &quot;V182&quot; &quot;V183&quot; &quot;V184&quot; &quot;V185&quot; &quot;V186&quot; &quot;V187&quot; &quot;V188&quot; &quot;V189&quot; &quot;V190&quot;
+## [191] &quot;V191&quot; &quot;V192&quot; &quot;V193&quot; &quot;V194&quot; &quot;V195&quot; &quot;V196&quot; &quot;V197&quot; &quot;V198&quot; &quot;V199&quot; &quot;V200&quot;
+## [201] &quot;V201&quot; &quot;V202&quot; &quot;V203&quot; &quot;V204&quot; &quot;V205&quot; &quot;V206&quot; &quot;V207&quot; &quot;V208&quot; &quot;V209&quot; &quot;V210&quot;
+## [211] &quot;V211&quot; &quot;V212&quot; &quot;V213&quot; &quot;V214&quot; &quot;V215&quot; &quot;V216&quot; &quot;V217&quot; &quot;V218&quot; &quot;V219&quot; &quot;V220&quot;
+## [221] &quot;V221&quot; &quot;V222&quot; &quot;V223&quot; &quot;V224&quot; &quot;V225&quot; &quot;V226&quot; &quot;V227&quot; &quot;V228&quot; &quot;V229&quot; &quot;V230&quot;
+## [231] &quot;V231&quot; &quot;V232&quot; &quot;V233&quot; &quot;V234&quot; &quot;V235&quot; &quot;V236&quot; &quot;V237&quot; &quot;V238&quot; &quot;V239&quot; &quot;V240&quot;
+## [241] &quot;V241&quot; &quot;V242&quot; &quot;V243&quot; &quot;V244&quot; &quot;V245&quot; &quot;V246&quot; &quot;V247&quot; &quot;V248&quot; &quot;V249&quot; &quot;V250&quot;
+## [251] &quot;V251&quot; &quot;V252&quot; &quot;V253&quot; &quot;V254&quot; &quot;V255&quot; &quot;V256&quot; &quot;V257&quot; &quot;V258&quot; &quot;V259&quot; &quot;V260&quot;
+## [261] &quot;V261&quot; &quot;V262&quot; &quot;V263&quot; &quot;V264&quot; &quot;V265&quot; &quot;V266&quot; &quot;V267&quot; &quot;V268&quot; &quot;V269&quot; &quot;V270&quot;
+## [271] &quot;V271&quot; &quot;V272&quot; &quot;V273&quot; &quot;V274&quot; &quot;V275&quot; &quot;V276&quot; &quot;V277&quot; &quot;V278&quot; &quot;V279&quot; &quot;V280&quot;
+## [281] &quot;V281&quot; &quot;V282&quot; &quot;V283&quot; &quot;V284&quot; &quot;V285&quot; &quot;V286&quot; &quot;V287&quot; &quot;V288&quot; &quot;V289&quot; &quot;V290&quot;
+## [291] &quot;V291&quot; &quot;V292&quot; &quot;V293&quot; &quot;V294&quot; &quot;V295&quot; &quot;V296&quot; &quot;V297&quot; &quot;V298&quot; &quot;V299&quot; &quot;V300&quot;
+## [301] &quot;V301&quot; &quot;V302&quot; &quot;V303&quot; &quot;V304&quot; &quot;V305&quot; &quot;V306&quot; &quot;V307&quot; &quot;V308&quot; &quot;V309&quot; &quot;V310&quot;
+## [311] &quot;V311&quot; &quot;V312&quot; &quot;V313&quot; &quot;V314&quot; &quot;V315&quot; &quot;V316&quot; &quot;V317&quot; &quot;V318&quot; &quot;V319&quot; &quot;V320&quot;
+## [321] &quot;V321&quot; &quot;V322&quot; &quot;V323&quot; &quot;V324&quot; &quot;V325&quot; &quot;V326&quot; &quot;V327&quot; &quot;V328&quot; &quot;V329&quot; &quot;V330&quot;
+## [331] &quot;V331&quot; &quot;V332&quot; &quot;V333&quot; &quot;V334&quot; &quot;V335&quot; &quot;V336&quot; &quot;V337&quot; &quot;V338&quot; &quot;V339&quot; &quot;V340&quot;
+## [341] &quot;V341&quot; &quot;V342&quot; &quot;V343&quot; &quot;V344&quot; &quot;V345&quot; &quot;V346&quot; &quot;V347&quot; &quot;V348&quot; &quot;V349&quot; &quot;V350&quot;
+## [351] &quot;V351&quot; &quot;V352&quot; &quot;V353&quot; &quot;V354&quot; &quot;V355&quot; &quot;V356&quot; &quot;V357&quot; &quot;V358&quot; &quot;V359&quot; &quot;V360&quot;
+## [361] &quot;V361&quot; &quot;V362&quot; &quot;V363&quot; &quot;V364&quot; &quot;V365&quot; &quot;V366&quot; &quot;V367&quot; &quot;V368&quot; &quot;V369&quot; &quot;V370&quot;
+## [371] &quot;V371&quot; &quot;V372&quot; &quot;V373&quot; &quot;V374&quot; &quot;V375&quot; &quot;V376&quot; &quot;V377&quot; &quot;V378&quot; &quot;V379&quot; &quot;V380&quot;
+## [381] &quot;V381&quot; &quot;V382&quot; &quot;V383&quot; &quot;V384&quot; &quot;V385&quot; &quot;V386&quot; &quot;V387&quot; &quot;V388&quot; &quot;V389&quot; &quot;V390&quot;
+## [391] &quot;V391&quot; &quot;V392&quot; &quot;V393&quot; &quot;V394&quot; &quot;V395&quot; &quot;V396&quot; &quot;V397&quot; &quot;V398&quot; &quot;V399&quot; &quot;V400&quot;
+## [401] &quot;V401&quot; &quot;V402&quot; &quot;V403&quot; &quot;V404&quot; &quot;V405&quot; &quot;V406&quot; &quot;V407&quot; &quot;V408&quot; &quot;V409&quot; &quot;V410&quot;
+## [411] &quot;V411&quot; &quot;V412&quot; &quot;V413&quot; &quot;V414&quot; &quot;V415&quot; &quot;V416&quot; &quot;V417&quot; &quot;V418&quot; &quot;V419&quot; &quot;V420&quot;
+## [421] &quot;V421&quot; &quot;V422&quot; &quot;V423&quot; &quot;V424&quot; &quot;V425&quot; &quot;V426&quot; &quot;V427&quot; &quot;V428&quot; &quot;V429&quot; &quot;V430&quot;
+## [431] &quot;V431&quot; &quot;V432&quot; &quot;V433&quot; &quot;V434&quot; &quot;V435&quot; &quot;V436&quot; &quot;V437&quot; &quot;V438&quot; &quot;V439&quot; &quot;V440&quot;
+## [441] &quot;V441&quot; &quot;V442&quot; &quot;V443&quot; &quot;V444&quot; &quot;V445&quot; &quot;V446&quot; &quot;V447&quot; &quot;V448&quot; &quot;V449&quot; &quot;V450&quot;
+## [451] &quot;V451&quot; &quot;V452&quot; &quot;V453&quot; &quot;V454&quot; &quot;V455&quot; &quot;V456&quot; &quot;V457&quot; &quot;V458&quot; &quot;V459&quot; &quot;V460&quot;
+## [461] &quot;V461&quot; &quot;V462&quot; &quot;V463&quot; &quot;V464&quot; &quot;V465&quot; &quot;V466&quot; &quot;V467&quot; &quot;V468&quot; &quot;V469&quot; &quot;V470&quot;
+## [471] &quot;V471&quot; &quot;V472&quot; &quot;V473&quot; &quot;V474&quot; &quot;V475&quot; &quot;V476&quot; &quot;V477&quot; &quot;V478&quot; &quot;V479&quot; &quot;V480&quot;
+## [481] &quot;V481&quot; &quot;V482&quot; &quot;V483&quot; &quot;V484&quot; &quot;V485&quot; &quot;V486&quot; &quot;V487&quot; &quot;V488&quot; &quot;V489&quot; &quot;V490&quot;
+## [491] &quot;V491&quot; &quot;V492&quot; &quot;V493&quot; &quot;V494&quot; &quot;V495&quot; &quot;V496&quot; &quot;V497&quot; &quot;V498&quot; &quot;V499&quot; &quot;V500&quot;
+## [501] &quot;V501&quot; &quot;V502&quot; &quot;V503&quot; &quot;V504&quot; &quot;V505&quot; &quot;V506&quot; &quot;V507&quot; &quot;V508&quot; &quot;V509&quot; &quot;V510&quot;
+## [511] &quot;V511&quot; &quot;V512&quot; &quot;V513&quot; &quot;V514&quot; &quot;V515&quot; &quot;V516&quot; &quot;V517&quot; &quot;V518&quot; &quot;V519&quot; &quot;V520&quot;
+## [521] &quot;V521&quot; &quot;V522&quot; &quot;V523&quot; &quot;V524&quot; &quot;V525&quot; &quot;V526&quot; &quot;V527&quot; &quot;V528&quot; &quot;V529&quot; &quot;V530&quot;
+## [531] &quot;V531&quot; &quot;V532&quot; &quot;V533&quot; &quot;V534&quot; &quot;V535&quot; &quot;V536&quot; &quot;V537&quot; &quot;V538&quot; &quot;V539&quot; &quot;V540&quot;
+## [541] &quot;V541&quot; &quot;V542&quot; &quot;V543&quot; &quot;V544&quot; &quot;V545&quot; &quot;V546&quot; &quot;V547&quot; &quot;V548&quot; &quot;V549&quot; &quot;V550&quot;
+## [551] &quot;V551&quot; &quot;V552&quot; &quot;V553&quot; &quot;V554&quot; &quot;V555&quot; &quot;V556&quot; &quot;V557&quot; &quot;V558&quot; &quot;V559&quot; &quot;V560&quot;
+## [561] &quot;V561&quot;
+</code></pre>
+
+<pre><code class="r">#Subset variables using variable names.
+select &lt;- c(key(merged_all_data), features_data$featureCode)
+merged_all_data &lt;- merged_all_data[, select, with = FALSE]
+</code></pre>
+
+<h1>step 3: Uses descriptive activity names to name the activities in the data set</h1>
+
+<h1>step 4 : Appropriately labels the data set with descriptive variable names.</h1>
+
+<pre><code class="r">        # Read the file activity_labels.txt, that contains the labels
+        labels_data &lt;- fread(file.path(pathIn, &quot;activity_labels.txt&quot;))
+        setnames(labels_data, names(labels_data), c(&quot;activityNum&quot;, &quot;activityName&quot;))
+
+        #Label with descriptive activity names
+        merged_all_data &lt;- merge(merged_all_data, labels_data, by = &quot;activityNum&quot;, all.x = TRUE)
+        #Add activityName as a key.
+        setkey(merged_all_data, subject, activityNum, activityName)
+
+        #Melt the data table to reshape it from a short and wide format to a tall and narrow format.
+        merged_all_data &lt;- data.table(melt(merged_all_data, key(merged_all_data), variable.name = &quot;featureCode&quot;))
+        #Merge activity name.
+        merged_all_data &lt;- merge(merged_all_data, features_data[, list(featureNum, featureCode, featureName)], by = &quot;featureCode&quot;, all.x = TRUE)
+
+        #Create a new variable, activity that is equivalent to activityName as a factor class. Create a new variable, featurethat is equivalent to featureName as a factor class.
+        merged_all_data$activity &lt;- factor(merged_all_data$activityName)
+        merged_all_data$feature &lt;- factor(merged_all_data$featureName)
+        #Seperate features from featureName using the helper function grepthis.
+        grepthis &lt;- function(regex) {
+                grepl(regex, merged_all_data$feature)
+        }
+        ##Appropriately labels the data set with descriptive variable names. 
+        ## Features with 2 categories
+        n &lt;- 2
+        y &lt;- matrix(seq(1, n), nrow = n)
+        x &lt;- matrix(c(grepthis(&quot;^t&quot;), grepthis(&quot;^f&quot;)), ncol = nrow(y))
+
+        merged_all_data$featDomain &lt;- factor(x %*% y, labels = c(NA,&quot;Time&quot;, &quot;Freq&quot;))
+        x &lt;- matrix(c(grepthis(&quot;Acc&quot;), grepthis(&quot;Gyro&quot;)), ncol = nrow(y))
+        merged_all_data$featInstrument &lt;- factor(x %*% y, labels = c(NA,&quot;Accelerometer&quot;, &quot;Gyroscope&quot;))
+        x &lt;- matrix(c(grepthis(&quot;BodyAcc&quot;), grepthis(&quot;GravityAcc&quot;)), ncol = nrow(y))
+        merged_all_data$featAcceleration &lt;- factor(x %*% y, labels = c(NA, &quot;Body&quot;, &quot;Gravity&quot;))
+        x &lt;- matrix(c(grepthis(&quot;mean()&quot;), grepthis(&quot;std()&quot;)), ncol = nrow(y))
+        merged_all_data$featVariable &lt;- factor(x %*% y, labels = c(NA, &quot;Mean&quot;, &quot;SD&quot;))
+
+        ## Features with 1 category
+        merged_all_data$featJerk &lt;- factor(grepthis(&quot;Jerk&quot;), labels = c(NA, &quot;Jerk&quot;))
+        merged_all_data$featMagnitude &lt;- factor(grepthis(&quot;Mag&quot;), labels = c(NA, &quot;Magnitude&quot;))
+
+        ## Features with 3 categories
+        n &lt;- 3
+        y &lt;- matrix(seq(1, n), nrow = n)
+        x &lt;- matrix(c(grepthis(&quot;-X&quot;), grepthis(&quot;-Y&quot;), grepthis(&quot;-Z&quot;)), ncol = nrow(y))
+        merged_all_data$featAxis &lt;- factor(x %*% y, labels = c(NA, &quot;X&quot;, &quot;Y&quot;, &quot;Z&quot;))
+
+        #Check to make sure all possible combinations of feature are accounted for by all possible combinations of the factor class variables.
+        r1 &lt;- nrow(merged_all_data[, .N, by = c(&quot;feature&quot;)])
+        r2 &lt;- nrow(merged_all_data[, .N, by = c(&quot;featDomain&quot;, &quot;featAcceleration&quot;, &quot;featInstrument&quot;, &quot;featJerk&quot;, &quot;featMagnitude&quot;, &quot;featVariable&quot;, &quot;featAxis&quot;)])
+        r1 == r2
+</code></pre>
+
+<pre><code>## [1] FALSE
+</code></pre>
+
+<pre><code class="r">        ## [1] TRUE
+        # accounted for all possible combinations. feature is now duplicate.
+</code></pre>
+
+<h1>Step 5 : Create a tidy data set</h1>
+
+<pre><code class="r"># Create a data set with the average of each variable for each activity and each subject.
+setkey(merged_all_data, subject, activity, featDomain, featAcceleration, featInstrument, 
+       featJerk, featMagnitude, featVariable, featAxis)
+tidy_data &lt;- merged_all_data[, list(count = .N, average = mean(value)), by = key(merged_all_data)]
+head(tidy_data)
+</code></pre>
+
+<pre><code>##    subject activity featDomain featAcceleration featInstrument featJerk
+## 1:       1   LAYING         NA               NA             NA       NA
+## 2:       1   LAYING         NA               NA      Gyroscope       NA
+## 3:       1   LAYING         NA               NA      Gyroscope     Jerk
+## 4:       1   LAYING         NA             Body  Accelerometer       NA
+## 5:       1   LAYING         NA             Body  Accelerometer     Jerk
+## 6:       1   LAYING       Time               NA      Gyroscope       NA
+##    featMagnitude featVariable featAxis count      average
+## 1:            NA           NA       NA   150 -0.148683567
+## 2:            NA           NA       NA    50 -0.001666985
+## 3:            NA           NA       NA    50  0.084437165
+## 4:            NA           NA       NA    50  0.021365966
+## 5:            NA           NA       NA    50  0.003060407
+## 6:            NA           NA       NA    50 -0.879291898
+</code></pre>
+
+<pre><code class="r">write.table(tidy_data,file=&quot;tidy_data_arun.txt&quot;)
+</code></pre>
+
+</body>
+
+</html>
