@@ -169,7 +169,7 @@ setkey(merged_all_data, subject, activity, featDomain, featAcceleration, featIns
 tidy_data <- merged_all_data[, list(count = .N, average = mean(value)), by = key(merged_all_data)]
 head(tidy_data)
 
-write.table(tidy_data,file="tidy_data_arun.txt")
+write.table(tidy_data,file="tidy_data_arun.txt", row.name=FALSE)
 ```
 
 # Generation of cookbook.md or cookbook.html
