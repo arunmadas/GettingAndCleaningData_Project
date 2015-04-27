@@ -1,0 +1,324 @@
+Units for feature variables: none, because each feature vector has been normalised and its range is from -1 to 1.
+For more details of how the features were calculated, refer to features_info.txt available with the original dataset which this project only modifies.
+
+*subject
+Labels for volunteers carrying out the experiment.
+
+
+*activity
+Labels for the six activities performed by the volunteers.
+
+*tBodyAcc-mean()-X
+Average of all values of tBodyAcc  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyAcc-mean()-Y
+Average of all values of tBodyAcc  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyAcc-mean()-Z
+Average of all values of tBodyAcc  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyAcc-std()-X
+Average of all values of tBodyAcc  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyAcc-std()-Y
+Average of all values of tBodyAcc  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyAcc-std()-Z
+Average of all values of tBodyAcc  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tGravityAcc-mean()-X
+Average of all values of tGravityAcc  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*tGravityAcc-mean()-Y
+Average of all values of tGravityAcc  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tGravityAcc-mean()-Z
+Average of all values of tGravityAcc  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tGravityAcc-std()-X
+Average of all values of tGravityAcc  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*tGravityAcc-std()-Y
+Average of all values of tGravityAcc  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tGravityAcc-std()-Z
+Average of all values of tGravityAcc  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyAccJerk-mean()-X
+Average of all values of tBodyAccJerk  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyAccJerk-mean()-Y
+Average of all values of tBodyAccJerk  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyAccJerk-mean()-Z
+Average of all values of tBodyAccJerk  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyAccJerk-std()-X
+Average of all values of tBodyAccJerk  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyAccJerk-std()-Y
+Average of all values of tBodyAccJerk  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyAccJerk-std()-Z
+Average of all values of tBodyAccJerk  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyGyro-mean()-X
+Average of all values of tBodyGyro  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyGyro-mean()-Y
+Average of all values of tBodyGyro  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyGyro-mean()-Z
+Average of all values of tBodyGyro  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyGyro-std()-X
+Average of all values of tBodyGyro  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyGyro-std()-Y
+Average of all values of tBodyGyro  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyGyro-std()-Z
+Average of all values of tBodyGyro  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyGyroJerk-mean()-X
+Average of all values of tBodyGyroJerk  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyGyroJerk-mean()-Y
+Average of all values of tBodyGyroJerk  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyGyroJerk-mean()-Z
+Average of all values of tBodyGyroJerk  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyGyroJerk-std()-X
+Average of all values of tBodyGyroJerk  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*tBodyGyroJerk-std()-Y
+Average of all values of tBodyGyroJerk  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*tBodyGyroJerk-std()-Z
+Average of all values of tBodyGyroJerk  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*tBodyAccMag-mean()
+Average of all values of tBodyAccMag  Mean () for each (subject, activity) pair.
+
+
+*tBodyAccMag-std()
+Average of all values of tBodyAccMag  Standard deviation () for each (subject, activity) pair.
+
+
+*tGravityAccMag-mean()
+Average of all values of tGravityAccMag  Mean () for each (subject, activity) pair.
+
+
+*tGravityAccMag-std()
+Average of all values of tGravityAccMag  Standard deviation () for each (subject, activity) pair.
+
+
+*tBodyAccJerkMag-mean()
+Average of all values of tBodyAccJerkMag  Mean () for each (subject, activity) pair.
+
+
+*tBodyAccJerkMag-std()
+Average of all values of tBodyAccJerkMag  Standard deviation () for each (subject, activity) pair.
+
+
+*tBodyGyroMag-mean()
+Average of all values of tBodyGyroMag  Mean () for each (subject, activity) pair.
+
+
+*tBodyGyroMag-std()
+Average of all values of tBodyGyroMag  Standard deviation () for each (subject, activity) pair.
+
+
+*tBodyGyroJerkMag-mean()
+Average of all values of tBodyGyroJerkMag  Mean () for each (subject, activity) pair.
+
+
+*tBodyGyroJerkMag-std()
+Average of all values of tBodyGyroJerkMag  Standard deviation () for each (subject, activity) pair.
+
+
+*fBodyAcc-mean()-X
+Average of all values of fBodyAcc  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-mean()-Y
+Average of all values of fBodyAcc  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-mean()-Z
+Average of all values of fBodyAcc  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-std()-X
+Average of all values of fBodyAcc  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-std()-Y
+Average of all values of fBodyAcc  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-std()-Z
+Average of all values of fBodyAcc  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-meanFreq()-X
+Average of all values of fBodyAcc  Mean Freq() (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-meanFreq()-Y
+Average of all values of fBodyAcc  Mean Freq() (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyAcc-meanFreq()-Z
+Average of all values of fBodyAcc  Mean Freq() (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-mean()-X
+Average of all values of fBodyAccJerk  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-mean()-Y
+Average of all values of fBodyAccJerk  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-mean()-Z
+Average of all values of fBodyAccJerk  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-std()-X
+Average of all values of fBodyAccJerk  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-std()-Y
+Average of all values of fBodyAccJerk  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-std()-Z
+Average of all values of fBodyAccJerk  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-meanFreq()-X
+Average of all values of fBodyAccJerk  Mean Freq() (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-meanFreq()-Y
+Average of all values of fBodyAccJerk  Mean Freq() (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyAccJerk-meanFreq()-Z
+Average of all values of fBodyAccJerk  Mean Freq() (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-mean()-X
+Average of all values of fBodyGyro  Mean () (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-mean()-Y
+Average of all values of fBodyGyro  Mean () (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-mean()-Z
+Average of all values of fBodyGyro  Mean () (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-std()-X
+Average of all values of fBodyGyro  Standard deviation () (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-std()-Y
+Average of all values of fBodyGyro  Standard deviation () (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-std()-Z
+Average of all values of fBodyGyro  Standard deviation () (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-meanFreq()-X
+Average of all values of fBodyGyro  Mean Freq() (Along X-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-meanFreq()-Y
+Average of all values of fBodyGyro  Mean Freq() (Along Y-axis) for each (subject, activity) pair.
+
+
+*fBodyGyro-meanFreq()-Z
+Average of all values of fBodyGyro  Mean Freq() (Along Z-axis) for each (subject, activity) pair.
+
+
+*fBodyAccMag-mean()
+Average of all values of fBodyAccMag  Mean () for each (subject, activity) pair.
+
+
+*fBodyAccMag-std()
+Average of all values of fBodyAccMag  Standard deviation () for each (subject, activity) pair.
+
+
+*fBodyAccMag-meanFreq()
+Average of all values of fBodyAccMag  Mean Freq() for each (subject, activity) pair.
+
+
+*fBodyBodyAccJerkMag-mean()
+Average of all values of fBodyBodyAccJerkMag  Mean () for each (subject, activity) pair.
+
+
+*fBodyBodyAccJerkMag-std()
+Average of all values of fBodyBodyAccJerkMag  Standard deviation () for each (subject, activity) pair.
+
+
+*fBodyBodyAccJerkMag-meanFreq()
+Average of all values of fBodyBodyAccJerkMag  Mean Freq() for each (subject, activity) pair.
+
+
+*fBodyBodyGyroMag-mean()
+Average of all values of fBodyBodyGyroMag  Mean () for each (subject, activity) pair.
+
+
+*fBodyBodyGyroMag-std()
+Average of all values of fBodyBodyGyroMag  Standard deviation () for each (subject, activity) pair.
+
+
+*fBodyBodyGyroMag-meanFreq()
+Average of all values of fBodyBodyGyroMag  Mean Freq() for each (subject, activity) pair.
+
+
+*fBodyBodyGyroJerkMag-mean()
+Average of all values of fBodyBodyGyroJerkMag  Mean () for each (subject, activity) pair.
+
+
+*fBodyBodyGyroJerkMag-std()
+Average of all values of fBodyBodyGyroJerkMag  Standard deviation () for each (subject, activity) pair.
+
+
+*fBodyBodyGyroJerkMag-meanFreq()
+Average of all values of fBodyBodyGyroJerkMag  Mean Freq() for each (subject, activity) pair.
